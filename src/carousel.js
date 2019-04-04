@@ -200,7 +200,7 @@ export default class Carousel extends Component {
 
     position = {
       minWidth: indicatorWidth,
-      left: (this.getWidth() - indicatorWidth) / 2,
+      left: this.props.isLeft == 'left' ? 16 : (this.getWidth() - indicatorWidth) / 2,
     };
 
     this.children.forEach((child, i) => {
