@@ -110,7 +110,11 @@ export default class Carousel extends Component {
 
   componentDidMount() {
     this._resetPager();
+    this.props.onRef(this);  // add this line
   }
+componentWillMount(){
+         this.props.onRef(undefined);
+     }
 
   indicatorPressed(activePage: number) {
     this.setState({activePage});
